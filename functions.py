@@ -54,8 +54,8 @@ def clustering_missmatch(result: pd.DataFrame,
 
     #dictionary[povodny_cluster] = novy_cluster
     final_maping = {}
-    for i in range(0, len(maping)):
-        final_maping[i+1] = maping[i]
+    for i in range(1, len(maping)+1):
+        final_maping[i] = maping.index(i)+1
 
     result['New_Solution'] = result.apply(lambda row : final_maping[row['Solution']], axis = 1)
     del result['Solution']
