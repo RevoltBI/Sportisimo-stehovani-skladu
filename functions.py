@@ -324,7 +324,7 @@ def compare_two_models_2(solution_1 : list, solution_2 : pd.DataFrame,
     one_move_size = count_one_move_size(count_of_move)
 
     start_date = datetime.datetime.strptime(start_date,"%d-%m-%Y")
-    time_sequence = [start_date + datetime.timedelta(days = 2*i) for i in range(count_of_move+1)]
+    time_sequence = [start_date + datetime.timedelta(days = i) for i in range(count_of_move+1)]
 
     entire_stock_volumes = sum(volumes_original.Volumes)
     one_move_size = math.ceil( entire_stock_volumes / count_of_move )
