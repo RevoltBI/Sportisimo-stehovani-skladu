@@ -334,7 +334,7 @@ def compare_two_models_2(solution_1 : list, solution_2 : pd.DataFrame,
     loss_2,    LOG_2      = loss_function_2(volumes_original, sales_original, solution_2,    time_sequence, one_move_size)
 
     plt.figure(figsize = [10,6])
-    plt.plot(LOG_1.T[0],LOG_1.T[2], color = 'gray',  label = 'total orders', alpha = 0.5)
+    #plt.plot(LOG_1.T[0],LOG_1.T[2], color = 'gray',  label = 'total orders', alpha = 0.5)
     plt.plot(LOG_1.T[0],LOG_1.T[1], color = 'red',   label = '{} - model 1'.format(loss_1))
     plt.plot(LOG_2.T[0],LOG_2.T[1], color = 'green', label = '{} - model 2'.format(loss_2))
     plt.grid(True)
